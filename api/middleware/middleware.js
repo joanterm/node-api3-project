@@ -25,7 +25,7 @@ function validateUser(req, res, next) {
     res.status(400).json({message: "missing required name field"})
     return
   }
-  req.nameFieldVerified = {name: req.body.name.trim()}
+  req.bodyNameUserValidated = {name: req.body.name.trim()}
   next()
 }
 
